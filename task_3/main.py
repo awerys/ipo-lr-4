@@ -1,23 +1,19 @@
 #Имя автора - awerys
 # Запрашиваем число у пользователя с проверкой
 while True:
-    try:
-        n = int(input("Введите положительное число n: "))
-        if n > 0:
+        a = int(input("Введите число a: "))
+        b = int(input("Введите число b: "))
+        if b > a:
             break
-        else:
-            print("Число должно быть положительным!")
-    except ValueError:
-        print("Пожалуйста, введите целое число!")
 # Инициализируем переменную для суммы
 total = 0
 # Используем цикл for для подсчета суммы
-print(f"Вычисляем сумму чисел от 1 до {n}:")
-for i in range(1, n + 1):
+print(f"Вычисляем сумму чисел от {a} до {b}:")
+for i in range(b, a + b):
     total += i
-    if i < n:
+    if a < b:
         print(f"{i} + ", end="")
     else:
         print(f"{i} = {total}")
 
-print(f"Сумма всех чисел от 1 до {n} равна: {total}")
+print(f"Сумма всех чисел от {a} до {b} равна: {total}")
